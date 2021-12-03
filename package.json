@@ -1,12 +1,29 @@
 {
   "name": "cupict-converter",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "for create multiple test cases",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarkers/cupict-converter.git"
+  },
+  "keywords": [
+    "pair",
+    "wise",
+    "testing",
+    "pict",
+    "automation",
+    "cucumber",
+    "converter"
+  ],
   "author": "chen-ku",
+  "bugs": {
+    "url": "https://github.com/tarkers/cupict-converter/issues"
+  },
+  "homepage": "https://github.com/tarkers/cupict-converter#readme",
   "license": "ISC",
   "dependencies": {
     "@cucumber/cucumber": "^8.0.0-rc.1",

@@ -48,7 +48,6 @@ function pict(model, options = {}) {
       error: err.message.split('\n')[1].trim(),
     };
   }
-  console.log(stdOut)
   let parsedTestCases = [];
   let parsedStats = {};
   if (
