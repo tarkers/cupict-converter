@@ -1,0 +1,15 @@
+{
+  "name": "cupict-converter",
+  "version": "1.0.2",
+  "description": "for create multiple test cases",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chen-ku",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^8.0.0-rc.1",
+    "jsonpath": "^1.1.1"
+  }
+}
