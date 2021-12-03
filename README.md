@@ -22,7 +22,7 @@ converter.ConvertFeature()
 ```
 
 ## Our Cupict feature format
-### At Line 14 <font color="red"> Given PICT </font> is our keyword
+### At Line 14 <font color="red"> "Given PICT" </font> is our keyword
 see more gherkin usage:[cucumber studio](https://cucumber.io/docs/gherkin/reference/)
 ```gherkin=
 Feature: Phone Setting?
