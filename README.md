@@ -1,6 +1,4 @@
 # Cupict Converter
-
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/tarkers/cupict-converter/blob/main/LICENSE)
 ## About Cupict 
 It's the  converter for supporting cucumber feature file with PICT to **generate mutiple test cases more easily**.
 
