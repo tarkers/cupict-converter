@@ -1,3 +1,4 @@
+/* Modify from https://github.com/ryanrosello-og/pict-pairwise-testing under MIT license*/
 const execSync = require('child_process').execSync;
 const path = require('path');
 const writeFileSync = require('fs').writeFileSync;
