@@ -1,9 +1,9 @@
-# Cupict Converter
+# CuPict Converter
 
 ## About Cupict 
-It's the  converter for supporting cucumber feature file with PICT to **generate mutiple test cases more easily**.
+CuPict is a tool of supporting combinatorial tesing for Cucumber.
 
-Visit [Microsoft Pict](https://github.com/Microsoft/pict/blob/main/doc/pict.md) to see more information about pict and [cucumber](https://github.com/cucumber/cucumber-js/blob/HEAD/CONTRIBUTING.md) to know more about the feature pickle transformation
+Visit [Microsoft PICT](https://github.com/Microsoft/pict/blob/main/doc/pict.md) to see more information about PICT and [Cucumber](https://github.com/cucumber/cucumber-js/blob/HEAD/CONTRIBUTING.md) to know more about a BDD Feature file.
 
 ## Setup
 ```
@@ -11,7 +11,6 @@ npm i cupict-converter
 ```
 
 ## Basic Usage
-give the feature file path you want to modify and than output the new file to the place you want
 ```javascript
 const Converter =require('cupict-converter')
 const inputpath="<your input feature path>"
@@ -20,9 +19,8 @@ const converter=new Converter(inputpath,outputpath)
 converter.ConvertFeature()
 ```
 
-## Our Cupict feature format
-### At Line 14 <font color="red"> Given PICT </font> is our keyword
-see more gherkin usage:[cucumber studio](https://cucumber.io/docs/gherkin/reference/)
+## Input feature file
+### Use the style <font color="red"> Given PICT </font> to write MS PICT plain-text model. See more Gherkin usage:[cucumber studio](https://cucumber.io/docs/gherkin/reference/)
 ```gherkin
 Feature: Make order?
     how to make the order
@@ -40,7 +38,7 @@ Feature: Make order?
             """
 ```
 
-## After Transform
+## Output feature file
 ```gherkin
 Feature: Make order?
     how to make the order
@@ -73,24 +71,26 @@ Feature: Make order?
             | Soup      | Fish      | Tea         |
             | Soup      | Steak     | Soft Drinks |
 ```
-## Cupict With Cucumber Studio
-for more information:[cucumber CI in 5 minutes](https://cucumber.io/tools/cucumberstudio/ci-in-5-minutes-flat/)
+## Using Cupict With Cucumber Studio
+See [cucumber CI in 5 minutes](https://cucumber.io/tools/cucumberstudio/ci-in-5-minutes-flat/) for more information about Cucumber CI.
 
-### 1.Sign up for CucumberStudio
-link: [cucumber studio](https://cucumber.io/) 
+### 1. Sign up for Cucumber Studio
+[cucumber studio](https://cucumber.io/) 
 
-### 2. type the scenerio
+### 2. Type the scenerio
 ![](https://i.imgur.com/DYq25pH.png)
 
-### 3. select javascript and download the files
+### 3. Select Javascript and download the files
 ![](https://i.imgur.com/eRsFHIe.png)
+
 ### 4. Convert the feature file 
-use our converter to generate new feature files
-### 5.(optional) update new feature file to CucumberStudio in orderto   set test run cases
+Use CuPict to generate new feature files
+
+### 5.(Optional) Update new feature files to Cucumber Studio in order to set test run cases
 ![](https://i.imgur.com/BRB2NuL.png)
 
 #### hps-cucumber-javascript 
-[hps-cucumber-javascript](https://github.com/hiptest/hps-cucumber-javascript) is the api to for connecting with CucumberStudio 
+[hps-cucumber-javascript](https://github.com/hiptest/hps-cucumber-javascript) is the api for connecting with Cucumber Studio 
 ```
  rvm install 2.3
  rvm use 2.3
@@ -110,8 +110,8 @@ use our converter to generate new feature files
 #  push the test case result to cucumber studio after running the test
     hiptest-publisher -c hiptest-publisher.conf - --push=junit_output.xml --test-run-id=<test-run-id>
 ```
-### 5. write the step-definition
-* put the step-definition file under features folder
+### 5. Write the step-definition
+* Put the step-definition file under features folder
 ```
 feature
     |_step-definition.js
@@ -143,16 +143,16 @@ Given(/^GoogleForm Page$/,{ timeout: 10 * 1000 }, async function () {
 .........
 ...
 ```
-### 6. run the test cases
-* if you want to generate report for cucumber studio
+### 6. Run the test cases
+* If you want to generate report for Cucumber Studio
 ```
 # generate report
     node_modules/.bin/cucumber-js --format=json | node_modules/cucumber-junit/bin/cucumber-junit --features-as-suites > junit_output.xml
 
-#push to CucumberStudio
+# push to Cucumber Studio
     hiptest-publisher -c hiptest-publisher.conf - --push=junit_output.xml --test-run-id=<test-run-id>
 ```
-* if you just want to run in local and get report
+* If you just want to run and get report locally
 ```
  node_modules/.bin/cucumber-js --publish
 ```
